@@ -12,5 +12,9 @@
 (function() {
 
     // your code here
-
+    const button = document.getElementById('run');
+    button.addEventListener('click', function(){
+        let color = document.getElementById('color').value;
+        document.getElementsByTagName('html')[0].style.background = color;
+    })
 })();

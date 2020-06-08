@@ -12,5 +12,33 @@
 (function() {
 
     // your code here
+    document.getElementById('run').addEventListener('click', ()=>{
+        let dob=document.getElementById('dob-day').value;
+        let mob=document.getElementById('dob-month').value;
+        let yob=document.getElementById('dob-year').value;
+
+        let currentDate = new Date();
+        let currentYear = currentDate.getFullYear();
+        let currentMonth = currentDate.getMonth();
+        let currentDay = currentDate.getDate();
+        
+        let userAge = 0;
+        let yearGap = currentYear - yob -1;
+        if(currentMonth < mob){
+            userAge += yearGap;
+        } else if (currentMonth == mob){
+            if(currentDay < dob){
+                userAge += yearGap;
+            } else {
+                userAge += 1;
+                userAge += yearGap;
+            }
+        } else {
+            userAge += 1;
+            userAge += yearGap;
+        }
+        
+        alert(`Your age is ${userAge}.`);
+    })
 
 })();

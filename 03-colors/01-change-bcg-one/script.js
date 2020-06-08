@@ -12,5 +12,27 @@
 (function() {
 
     // your code here
+    function test(color){
+        switch(color){
+            case 'red':
+                return '#ff1300';
+                break;
+            case 'green':
+                return '#0e610f';
+                break;
+            case 'yellow':
+                return '#ffe676';
+                break;
+            case 'blue':
+                return 'var(--main-blue)';
+                break;
+        }
+    }
+
+    const ctn = document.getElementsByClassName('actions')[0];
+    ctn.addEventListener('click', event => {
+        let id = event.target.id;
+        document.getElementsByTagName('html')[0].style.background = test(id);
+    })
 
 })();
