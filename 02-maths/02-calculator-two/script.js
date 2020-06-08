@@ -9,10 +9,31 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-function test() {
-    return true;
+function calc(i) {
+    switch(i){
+        case 0:
+            return (parseFloat(document.getElementById("op-one").value) + parseFloat(document.getElementById("op-two").value));
+            break;
+        case 1:
+            return (parseFloat(document.getElementById("op-one").value) - parseFloat(document.getElementById("op-two").value));
+            break;
+        case 2:
+            return (parseFloat(document.getElementById("op-one").value) * parseFloat(document.getElementById("op-two").value));
+            break;
+        case 3:
+            return (parseFloat(document.getElementById("op-one").value) / parseFloat(document.getElementById("op-two").value));
+            break;
+    }
 }
 
 (function() {
-    return true;
+   const operators = document.getElementsByClassName('operator');
+    for (let i=0;i<operators.length;i++){
+        operators[i].addEventListener('click', function(){
+            alert(calc(i));
+            document.getElementById("op-one").value = '';
+            document.getElementById("op-two").value = '';
+        })
+    }
+
 })();

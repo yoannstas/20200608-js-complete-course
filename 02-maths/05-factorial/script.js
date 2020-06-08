@@ -16,7 +16,22 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
-
+        let number = parseFloat(document.getElementById('number').value);
+        if(Number.isInteger(number)){
+            if (number < 0){
+                alert('Please enter positive integer.');
+            } else if (number == 0){
+                alert('Factorial of 0 is 1.');
+            } else {
+                let result = number;
+                for (let i=number-1;i>=1;i--){
+                    result = result*i;
+                }
+                alert(`Factorial of ${number} is ${result}.`);
+            }
+        } else {
+            alert('Please enter positive integer.');
+        }
     });
 
 })();

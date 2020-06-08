@@ -14,17 +14,34 @@
 
     document.getElementById("addition").addEventListener("click", function() {
         // perform an addition
+        let result = parseFloat(document.getElementById("op-one").value) + parseFloat(document.getElementById("op-two").value);
+        alert(result);
+        document.getElementById("op-one").value = '';
+        document.getElementById("op-two").value = '';
+
     });
 
     document.getElementById("substraction").addEventListener("click", function() {
         // perform an substraction
+        let result = parseFloat(document.getElementById("op-one").value) - parseFloat(document.getElementById("op-two").value);
+        alert(result);
+        document.getElementById("op-one").value = '';
+        document.getElementById("op-two").value = '';
     });
 
     document.getElementById("multiplication").addEventListener("click", function() {
         // perform an multiplication
+        let result = parseFloat(document.getElementById("op-one").value) * parseFloat(document.getElementById("op-two").value);
+        alert(result);
+        document.getElementById("op-one").value = '';
+        document.getElementById("op-two").value = '';
     });
 
     document.getElementById("division").addEventListener("click", function() {
         // perform an division
+        let result = parseFloat(document.getElementById("op-one").value) / parseFloat(document.getElementById("op-two").value);
+        alert(result);
+        document.getElementById("op-one").value = '';
+        document.getElementById("op-two").value = '';
     });
 })();
