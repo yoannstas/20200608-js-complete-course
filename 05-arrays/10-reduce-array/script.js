@@ -90,5 +90,9 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener('click', ()=>{
+        let totalAge = people.map(person => person['age']).reduce((total, num) => total + num);
+        console.log(totalAge);
+    })
 
 })();

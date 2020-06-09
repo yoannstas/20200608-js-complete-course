@@ -27,5 +27,12 @@
     ];
 
     // your code here
-
+    document.getElementById('run').addEventListener('click', ()=>{
+        //index of an item not existing in the array is -1
+        if(fruits.indexOf('apple') >= 0){
+            console.log('yes');
+        } else {
+            console.log('no');
+        }
+    })
 })();

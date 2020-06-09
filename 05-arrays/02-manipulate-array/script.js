@@ -25,5 +25,16 @@
     ];
 
     // your code here
-
+    document.getElementById('run').addEventListener('click', ()=>{
+        //remove the first item using shift()
+        fruits.shift();
+        //remove the last item using pop()
+        fruits.pop();
+        //add an item to the beginning using unshift()
+        fruits.unshift("banana");
+        //add an item to the end using push()
+        fruits.push("kiwi");
+        console.table(fruits);
+    })
+    
 })();

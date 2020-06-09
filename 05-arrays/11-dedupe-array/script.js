@@ -29,5 +29,13 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener('click',()=>{
+        //go through each 'item' in fruits array and filter out the unique item
+        let filteredFruits = fruits.filter((item, index) => {
+            return fruits.indexOf(item) === index;
+        })
 
+        console.table(filteredFruits);
+        
+    })
 })();
