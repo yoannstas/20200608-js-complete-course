@@ -16,6 +16,8 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
+        //Method 1: using for loop
+        /*
         let number = parseFloat(document.getElementById('number').value);
         if(Number.isInteger(number)){
             if (number < 0){
@@ -32,6 +34,27 @@
         } else {
             alert('Please enter positive integer.');
         }
+        */
+        
+       //Method 2: not considering the case when user input number < 0
+        /*
+        const factorial = (n) => (n>=1) ? n*factorial(n-1) : 1; 
+        alert(factorial(parseFloat(document.getElementById('number').value)));
+       */
+
+       //Method 3: consider the case when user input number < 0
+       //syntax: condition1 ? statement1 : condition2 ? statement2 : statement3
+        /* equal to:
+        if (condition1){
+            return statement1;
+        } else if (condition2) {
+            return statement2;
+        } else {
+            return statement3;
+        }
+        */
+        const factorial = (n) => (n<0) ? 'Please enter positive integer.' : (n>=1) ? n*factorial(n-1) : 1;
+        alert(factorial(parseFloat(document.getElementById('number').value)));
     });
 
 })();

@@ -12,7 +12,13 @@
 (function() {
 
     // your code here
+    //Method 1:
+    /*
     let name = prompt("What is your name?", "user");
     alert(`Hello, ${name}!`);
+    */
+
+    //Method 2: shorter
+    alert(`Hello, ${prompt('What is your name?', 'user')}`);
 
 })();

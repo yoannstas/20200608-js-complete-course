@@ -16,10 +16,19 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
+        /*
         let numbers = document.getElementById('numbers').value;
-        let array = numbers.split(",");
+        let array = numbers.split(",").map(n=>parseInt(n));
         array.sort((a,b)=>a-b);
-        alert(array)
+        alert(array);
+        */
+        
+        //get value of element with id 'numbers', it will be a string
+        //change it into an array using split(), using separator: comma (,); we will have an array of several elements, each being a string
+        //change elements of this array to numbers using map() and parseInt
+        //sort the numbers in the array using .sort((a,b)=>a-b))
+        //then finally put everything inside alert()
+        alert(document.getElementById('numbers').value.split(",").map(n=>parseInt(n)).sort((a,b)=>a-b));
     });
 
 })();

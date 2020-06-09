@@ -16,6 +16,7 @@
         // perform an addition
         let result = parseFloat(document.getElementById("op-one").value) + parseFloat(document.getElementById("op-two").value);
         alert(result);
+        //optional: to clear the two input fields
         document.getElementById("op-one").value = '';
         document.getElementById("op-two").value = '';
 
@@ -25,6 +26,7 @@
         // perform an substraction
         let result = parseFloat(document.getElementById("op-one").value) - parseFloat(document.getElementById("op-two").value);
         alert(result);
+        //optional: to clear the two input fields
         document.getElementById("op-one").value = '';
         document.getElementById("op-two").value = '';
     });
@@ -33,6 +35,7 @@
         // perform an multiplication
         let result = parseFloat(document.getElementById("op-one").value) * parseFloat(document.getElementById("op-two").value);
         alert(result);
+        //optional: to clear the two input fields
         document.getElementById("op-one").value = '';
         document.getElementById("op-two").value = '';
     });
@@ -41,6 +44,7 @@
         // perform an division
         let result = parseFloat(document.getElementById("op-one").value) / parseFloat(document.getElementById("op-two").value);
         alert(result);
+        //optional: to clear the two input fields
         document.getElementById("op-one").value = '';
         document.getElementById("op-two").value = '';
     });

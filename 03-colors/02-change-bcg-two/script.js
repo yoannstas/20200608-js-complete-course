@@ -15,6 +15,6 @@
     const button = document.getElementById('run');
     button.addEventListener('click', function(){
         let color = document.getElementById('color').value;
-        document.getElementsByTagName('html')[0].style.background = color;
+        document.body.style.background = color;
     })
 })();

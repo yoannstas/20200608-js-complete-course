@@ -12,6 +12,8 @@
 (function() {
 
   // your code here
+  //Method 1:
+  /*
   let answer = prompt('Do you want some cake?', 'Yes');
   
   if (answer == 'Yes' || answer == 'yes'){
@@ -19,5 +21,18 @@
   } else {
     alert('More cake for me then!');
   }
+  */
 
+  //Method 2: shorter
+  //syntax: condition ? statement1 : statement2
+  /* equal to:
+    if (condition is true){
+      return statement1;
+    } else {
+      return statement2;
+    }
+  */
+  let answer = prompt('Do you want some cake?', 'Yes').toLowerCase();
+  alert((answer=='yes') ? 'Congrat! You made the right choice.' : 'More cake for me then!');
+  
 })();

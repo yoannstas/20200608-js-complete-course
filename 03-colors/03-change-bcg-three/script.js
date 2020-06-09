@@ -20,7 +20,6 @@
             let randomIndex = Math.floor(Math.random()*15);
             color += array[randomIndex];
         }
-        console.log(color);
-        document.getElementsByTagName('html')[0].style.background = color;
+        document.body.style.background = color;
     })
 })();
