@@ -13,6 +13,8 @@
 
     // your code here
     document.getElementById('run').addEventListener('click', ()=>{
+
+        /*
         let dob=document.getElementById('dob-day').value;
         let mob=document.getElementById('dob-month').value;
         let yob=document.getElementById('dob-year').value;
@@ -30,15 +32,23 @@
             if(currentDay < dob){
                 userAge += yearGap;
             } else {
-                userAge += 1;
+                userAge++;
                 userAge += yearGap;
             }
         } else {
-            userAge += 1;
+            userAge++;
             userAge += yearGap;
         }
         
-        alert(`Your age is ${userAge}.`);
+        */
+
+        
+        let now = new Date();
+        let dy = now.getFullYear() - document.getElementById('dob-year').value;
+        let dm = now.getMonth() - document.getElementById('dob-month').value;
+        let dd = now.getDate() - document.getElementById('dob-day').value;
+        let age = (dm<0 || (dm==0 && dd<0)) ? dy-1 : dy;
+        alert(`Your age is ${age}.`);
     })
 
 })();

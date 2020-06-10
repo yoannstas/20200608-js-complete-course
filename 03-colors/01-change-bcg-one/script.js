@@ -12,6 +12,7 @@
 (function() {
 
     // your code here
+    /*Method 1:
     //Same here, 'break' is not needed, DON'T UNDERSTAND, is it because we use 'return'?
     function test(color){
         switch(color){
@@ -31,5 +32,14 @@
         let id = event.target.id;
         document.body.style.background = test(id);
     })
-
+    */
+    
+    //Method 2:
+    //syntax: condition1 ? statement1 : condition2 ? statement2 : condition3 ? statement3 : statement4
+    //statement4 (equivalent to statement in the last 'else') must be there, syntax required
+    document.getElementsByClassName('actions')[0].addEventListener('click', event => {
+        let id = event.target.id;
+        let test = (id)=>(id=='red')?'#ff1300':(id=='green')?'#0e610f':(id=='yellow')?'#ffe676':'var(--main-blue)';
+        document.body.style.background = test(id);
+    })
 })();

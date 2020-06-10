@@ -36,3 +36,23 @@
         document.getElementById('year').value = '';
     })
 })();
+
+//Laura code
+/*
+(function () {
+    document
+        .getElementById("run")
+        .addEventListener("click", function numberOfFridays13th(year) {
+            year = parseInt(document.getElementById("year").value);
+            var count = 0;
+            for (let month = 0; month < 12; month++) {
+            let d = new Date(year, month, 13);
+            if (d.getDay() == 5) {
+                count++;
+            }
+        }
+
+        alert(`${count} Fridays the 13th in the year ${year}`);
+    });
+})();
+*/

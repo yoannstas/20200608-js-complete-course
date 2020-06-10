@@ -13,8 +13,5 @@
 
     // your code here
     const button = document.getElementById('run');
-    button.addEventListener('click', function(){
-        let color = document.getElementById('color').value;
-        document.body.style.background = color;
-    })
+    button.addEventListener('click', ()=> document.body.style.background = document.getElementById('color').value);
 })();
