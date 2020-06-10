@@ -91,9 +91,7 @@
 
     // your code here
     document.getElementById('run').addEventListener('click', ()=>{
-        let newArr = people.filter(person => {
-            return person['age'] > 18;
-        })
+        let newArr = people.filter(person => person['age'] > 18);
         console.table(newArr);
     })
 })();

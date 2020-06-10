@@ -27,7 +27,5 @@
     ];
 
     // your code here
-    document.getElementById('run').addEventListener('click', ()=>{
-        console.log(fruits[3]);
-    })
+    document.getElementById('run').addEventListener('click', ()=> console.log(fruits[3]));
 })();

@@ -17,7 +17,7 @@
         //create an array with 10 random numbers between 1 and 100
         let arr = [];
         for (let i=0;i<10;i++){
-            arr[i] = Math.floor(Math.random()*99 + 1);
+            arr[i] = Math.round(Math.random()*99+1);
             //add these number to each table cell in html
             document.getElementById(`n-${i+1}`).innerHTML = arr[i];
         }
