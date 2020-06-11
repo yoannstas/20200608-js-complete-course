@@ -12,5 +12,9 @@
 (function() {
 
     // your code here
-
+    let slider = document.getElementById('slider');
+    let target = document.getElementById('target');
+    slider.addEventListener('mouseup',()=>{
+        target.innerHTML = `0${slider.value}`;
+    })
 })();

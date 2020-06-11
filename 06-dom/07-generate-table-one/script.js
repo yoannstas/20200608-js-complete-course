@@ -40,7 +40,6 @@
     */
     
     //METHOD 2
-    /*
     document.getElementById('target').innerHTML = `<table><tbody id='tbody'></tbody></table>`;
     let tbody = document.getElementById('tbody');
     let rowNum = 10;
@@ -55,6 +54,5 @@
             cell.innerHTML = 'text';
         }
     }
-    */
     
 })();

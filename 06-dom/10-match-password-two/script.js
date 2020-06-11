@@ -12,5 +12,15 @@
 (function() {
 
     // your code here
-
+    document.getElementById('run').addEventListener('click',()=>{
+        let pw1 = document.getElementById('pass-one');
+        let pw2 = document.getElementById('pass-two');
+        if (pw1.value !== pw2.value) {
+            pw1.classList.add('error');
+            pw2.classList.add('error');
+        } else {
+            pw1.classList.remove('error');
+            pw2.classList.remove('error');
+        }
+    })
 })();
