@@ -12,5 +12,6 @@
 (function() {
 
     // your code here
-
+    let url = document.getElementById('source').getAttribute('data-image');
+    document.getElementById('target').innerHTML = `<img src='${url}' alt='cat' />`;
 })();

@@ -20,5 +20,17 @@
     ];
 
     // your code here
-
+    const img = document.getElementsByTagName('img')[0];
+    document.getElementById('next').addEventListener('click',()=>{
+        //check which image is now being displayed in html
+        let index;
+        for (let i=0;i<gallery.length;i++){
+            //using img.getAttribute('src) gives back relative path, img.src gives back full path
+            if (img.getAttribute('src') == gallery[i]){
+                index = i;
+            }
+        }
+        //set value of src to the next img, if it is the last img, set src equals to the first img
+        img.src = (index == gallery.length-1) ? gallery[0] : gallery[index + 1]; 
+    })
 })();

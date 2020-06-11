@@ -12,5 +12,23 @@
 (function() {
 
     // your code here
+    document.getElementById('target').innerHTML = `<table><tbody id='tbody'></tbody></table>`;
+    let tbody = document.getElementById('tbody');
+    let rowNum = 10;
+    let colNum = 10;
+
+    for (let i=0;i<rowNum;i++){
+        //create rows
+        let row = tbody.insertRow(i);
+        //create columns (table data) in each row
+        for (let j=0;j<colNum;j++){
+            let cell = row.insertCell(j);
+            cell.innerHTML = (j+1)*(i+1);
+        }
+    }
+
+    
+    
+    
 
 })();
