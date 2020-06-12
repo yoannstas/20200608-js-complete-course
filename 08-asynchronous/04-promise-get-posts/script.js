@@ -11,4 +11,8 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener('click',()=>{
+        const handleSuccess = (res) => console.table(res);
+        window.lib.getPosts().then(handleSuccess); 
+    })
 })();

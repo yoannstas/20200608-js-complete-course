@@ -11,4 +11,26 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener('click',()=>{
+        let forComment = (error, res) => {
+            if(error){
+                console.log('error!!!');
+            } else {
+                console.table(res);
+                
+            }
+        }
+
+        let forPost = (error, res) => {
+            if(error){
+                console.log('error!!!');
+            } else {
+                console.table(res);
+                window.lib.getComments(res, forComment);
+            }
+        }
+        window.lib.getPosts(forPost);
+        
+        
+    })
 })();
