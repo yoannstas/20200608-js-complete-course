@@ -11,4 +11,10 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener('click',()=>{
+        fetch('../../_shared/api.json')
+            .then(response => response.json())
+            .then(data => data.heroes)
+            .then(heroes => heroes.forEach(hero => console.log(hero)));
+    })
 })();
